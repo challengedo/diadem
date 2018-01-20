@@ -1,0 +1,32 @@
+{
+  "name": "diadem",
+  "version": "1.0.0",
+  "description": "",
+  "main": "truffle.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "truffle": "7flash/truffle",
+    "truffle-hdwallet-provider": "0.0.3",
+    "zeppelin-solidity": "1.4.0"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "chai-as-promised": "^7.1.1",
+    "chai-bignumber": "^2.0.1"
+  },
+  "scripts": {
+    "test": "truffle test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/7flash/diadem.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/7flash/diadem/issues"
+  },
+  "homepage": "https://github.com/7flash/diadem#readme"
+}
