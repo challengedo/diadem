@@ -176,7 +176,7 @@ export default class Home extends Component {
       });
     });
   }
-  
+
   render() {
     return (
       <Article ref="article" className="home">
@@ -196,7 +196,7 @@ export default class Home extends Component {
                 <Box direction="row" justify="center">
                 <FormField label="ETH"><TextInput value={this.state.eth} onDOMChange={this._onChangeEth} /></FormField>
                 <FormField label="DIADEM"><TextInput value={this.state.diadem} onDOMChange={this._onChangeDiadem} /></FormField>
-                <Button label="INVEST" primary={true} type="submit" onClick={this._onSubmit} />
+                <Button className="tip-button" primary={true} type="submit" onClick={this._onSubmit} />
                 </Box>
               </Form>
           </InfographicSection>
