@@ -28,10 +28,11 @@ export default class Home extends Component {
       eth: "0",
       diadem: "0",
       rate: 2500,
-      tokenAddress: "0xfef513ff93998320659b5d89541908bca91fadaa",
-      tokensaleAddress: "0x4d91fd00c74135346c05e4fd62d19763376e1d59",
+      tokenAddress: "0x8c7d63ba371282aec28a2168359729d5b33cf6ab",
+      tokensaleAddress: "0xf8372fd57db31a62ac999daf15422351907cbe28",
       tokenContract: null,
-      metamaskConnected: false
+      metamaskConnected: false,
+      web3: null
     };
 
     this._onChangeEth = this._onChangeEth.bind(this);
@@ -70,6 +71,7 @@ export default class Home extends Component {
             web3: new Web3(window.web3.currentProvider),
             metamaskConnected: true
           });
+          resolve();
         } else {
           reject("Cannot connect to metamask");
         }
@@ -160,15 +162,21 @@ export default class Home extends Component {
   }
 
   _updateBalance() {
-    if(!this.tokenContract || !this.tokenContract.balanceOf || !this.state.web3)
+    if(!this.state.tokenContract || !this.state.tokenContract.deployed || !this.state.web3) {
       console.error("Cannot update balance");
+      return;
+    }
 
-    this.tokenContract.balanceOf.call(this.state.web3.accounts[0]).then((balance) => {
-      debugger;
-      this.setState({ balance });
+    const account = this.state.web3.eth.accounts[0];
+    const format = this.state.web3.fromWei;
+
+    this.state.tokenContract.deployed().then(instance => {
+      return instance.balanceOf.call(account).then((balance) => {
+        this.setState({ balance: balance.div(10**18).toNumber() });
+      });
     });
   }
-
+  
   render() {
     return (
       <Article ref="article" className="home">

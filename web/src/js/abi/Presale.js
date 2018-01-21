@@ -2747,6 +2747,11 @@ export default {
       "events": {},
       "links": {},
       "address": "0x4d91fd00c74135346c05e4fd62d19763376e1d59"
+    },
+    "3": {
+      "events": {},
+      "links": {},
+      "address": "0xf8372fd57db31a62ac999daf15422351907cbe28"
     }
   },
   "schemaVersion": "1.0.1",
