@@ -2328,6 +2328,11 @@
       },
       "links": {},
       "address": "0x8c7d63ba371282aec28a2168359729d5b33cf6ab"
+    },
+    "1": {
+      "events": {},
+      "links": {},
+      "address": "0x0E9030636b73858AD93fcBd5e1e783d5C4De1A5c"
     }
   },
   "schemaVersion": "1.0.1",
