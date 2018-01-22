@@ -8,7 +8,7 @@ export default class App extends Component {
   render() {
     return (
       <GrommetApp centered={false} inline={true}>
-        <PreICO proxy="https://mainnet.infuraghfgf.io/" />
+        <PreICO proxy="https://mainnet.infura.io/" />
       </GrommetApp>
     );
   }

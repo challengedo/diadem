@@ -14,6 +14,7 @@ import Button from 'grommet/components/Button';
 import Heading from 'grommet/components/Heading';
 import Form from 'grommet/components/Form';
 import Anchor from 'grommet/components/Anchor';
+import Layer from 'grommet/components/Layer';
 
 import InfographicSection from "../components/InfographicSection";
 
@@ -33,6 +34,7 @@ export default class Home extends Component {
       tokensaleAddress: "0x277b2fc535044cae94507a2e0b5a8047bb976365",
       tokenContract: null,
       metamaskConnected: false,
+      metamaskLayer: false,
       web3: null
     };
 
@@ -133,7 +135,7 @@ export default class Home extends Component {
       const updatedBalanceStatus = `${newBalance}`;
 
       this.setState({ balance: updatedBalanceStatus });
-    })
+    });
   }
 
   _onChangeEth(event) {
@@ -194,15 +196,14 @@ export default class Home extends Component {
                 <Button className="tip-button" primary={true} type="submit" onClick={this._onSubmit} />
                 </Box>
               </Form>
+            {this.state.metamaskLayer &&
+            <Headline size="small">
+              <div>Please connect to MetaMask and refresh the page</div>
+              <div>Also you can manually send {this.state.eth} ETH directly to {this.state.tokensaleAddress}</div>
+            </Headline>
+            }
           </InfographicSection>
         </div>
-        {this.metamaskLayer &&
-        <div>
-          <Headline size="medium">
-            Please connect to MetaMask and refresh the page.
-          </Headline>
-        </div>
-        }
       </Article>
     );
   }
