@@ -12,10 +12,10 @@ contract Presale {
 
     uint256 public cap = 1000 ether;
     uint256 public rate = 2500;
-    uint public startTime = 1516318446;
-    uint public endTime = 1616318446;
+    uint public startTime = 1516597200;
+    uint public endTime = 1517806800;
 
-    address public wallet = 0x123;
+    address public wallet = 0xC37CCc8e2DC57BBa95318d4c1E1fDA558012dCB0;
 
     event TokenPurchase(address indexed purchaser, address indexed beneficiary, uint256 value, uint256 amount);
 
