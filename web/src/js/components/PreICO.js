@@ -28,8 +28,8 @@ export default class Home extends Component {
       eth: "0",
       diadem: "0",
       rate: 2500,
-      tokenAddress: "0x8c7d63ba371282aec28a2168359729d5b33cf6ab",
-      tokensaleAddress: "0xf8372fd57db31a62ac999daf15422351907cbe28",
+      tokenAddress: "0x0E9030636b73858AD93fcBd5e1e783d5C4De1A5c",
+      tokensaleAddress: "0x277b2fc535044cae94507a2e0b5a8047bb976365",
       tokenContract: null,
       metamaskConnected: false,
       web3: null
