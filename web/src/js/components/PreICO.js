@@ -13,6 +13,7 @@ import NumberInput from 'grommet/components/NumberInput';
 import Button from 'grommet/components/Button';
 import Heading from 'grommet/components/Heading';
 import Form from 'grommet/components/Form';
+import Anchor from 'grommet/components/Anchor';
 
 import InfographicSection from "../components/InfographicSection";
 
@@ -184,7 +185,7 @@ export default class Home extends Component {
             </div>
             <Headline size="small">
               The economy built upon blockchain and social networks would give everyone transparent access
-                to the capital and motivation in order to develop the society. (Whitepaper)
+                to the capital and motivation in order to develop the society. <Anchor label="Whitepaper" primary={true} href="https://docs.google.com/document/d/1xgqRX8RsMuJfJsYH3nm3h_Lsbi5d2SQ1C-kDmCJANYk/edit?usp=sharing" target="_blank" />
             </Headline>
               <Form plain={true} onSubmit={this._onSubmit}>
                 <Box direction="row" justify="center">
