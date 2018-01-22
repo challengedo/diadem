@@ -103,12 +103,6 @@ export default class Home extends Component {
     return true;
   }
 
-  _updateBalance() {
-    this.tokenContract.balanceOf.call(this.state.web3.accounts[0]).then((balance) => {
-      this.setState({ balance });
-    });
-  }
-
   _onSubmit(event) {
     event.preventDefault();
 
@@ -172,7 +166,7 @@ export default class Home extends Component {
 
     this.state.tokenContract.deployed().then(instance => {
       return instance.balanceOf.call(account).then((balance) => {
-        this.setState({ balance: balance.div(10**18).toNumber() });
+        this.setState({ balance: balance.div(new BigNumber.BigNumber(10).pow(18)).toNumber() });
       });
     });
   }
