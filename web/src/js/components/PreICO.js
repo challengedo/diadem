@@ -159,7 +159,7 @@ export default class Home extends Component {
   }
 
   _updateBalance() {
-    if(!this.state.tokenContract || !this.state.tokenContract.deployed || !this.state.web3) {
+    if(!this.state.tokenContract || !this.state.tokenContract.deployed || !this.state.web3 || !this.state.web3.eth.accounts[0]) {
       console.error("Cannot update balance");
       return;
     }
@@ -169,7 +169,7 @@ export default class Home extends Component {
 
     this.state.tokenContract.deployed().then(instance => {
       return instance.balanceOf.call(account).then((balance) => {
-        this.setState({ balance: balance.div(new BigNumber.BigNumber(10).pow(18)).toNumber() });
+        this.setState({ balance: balance.div((new this.state.web3.BigNumber(10)).pow(18)).toNumber() });
       });
     });
   }
