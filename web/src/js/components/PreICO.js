@@ -69,7 +69,7 @@ export default class Home extends Component {
   _connectMetamask() {
     return new Promise((resolve, reject) => {
       window.addEventListener('load', () => {
-        if(window.web3 && window.web3.currentProvider) {
+        if(window.web3 && window.web3.currentProvider && window.web3.eth.accounts[0]) {
           this.setState({
             web3: new Web3(window.web3.currentProvider),
             metamaskConnected: true
