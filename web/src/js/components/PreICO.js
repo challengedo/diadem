@@ -187,10 +187,11 @@ export default class Home extends Component {
               <Heading tag="h4" margin="none">Token address: {this.state.tokenAddress}</Heading>
               <Heading tag="h4" margin="none">Your balance: {this.state.balance} DIADEM</Heading>
               <Heading tag="h4" margin="none">Time left: <SaleCountdown date={`2018-02-05T05:00:00.000Z`} /></Heading>
+              <Heading tag="h4" margin="none"><i>We offer <b>100% Bonus</b> and we don't request KYC only during this period.</i></Heading>
             </div>
             <Headline size="small">
-              The economy built upon blockchain and social networks would give everyone transparent access
-                to the capital and motivation in order to develop the society. <Anchor label="Whitepaper" primary={true} href="https://docs.google.com/document/d/1xgqRX8RsMuJfJsYH3nm3h_Lsbi5d2SQ1C-kDmCJANYk/edit?usp=sharing" target="_blank" />
+              Diadem Token give the power to create challenges, invest in talents, guide the actions of community and develop own habits
+              <Anchor label="Whitepaper" primary={true} href="https://docs.google.com/document/d/1xgqRX8RsMuJfJsYH3nm3h_Lsbi5d2SQ1C-kDmCJANYk/edit?usp=sharing" target="_blank" />
             </Headline>
               <Form plain={true} onSubmit={this._onSubmit}>
                 <Box direction="row" justify="center">
