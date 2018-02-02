@@ -18,6 +18,8 @@ import Layer from 'grommet/components/Layer';
 
 import InfographicSection from "../components/InfographicSection";
 
+import SaleCountdown from "../components/SaleCountdown";
+
 import DiademToken from '../abi/Diadem';
 
 export default class Home extends Component {
@@ -184,6 +186,7 @@ export default class Home extends Component {
               <Heading tag="h4" margin="none">Tokensale address: {this.state.tokensaleAddress}</Heading>
               <Heading tag="h4" margin="none">Token address: {this.state.tokenAddress}</Heading>
               <Heading tag="h4" margin="none">Your balance: {this.state.balance} DIADEM</Heading>
+              <Heading tag="h4" margin="none">Time left: <SaleCountdown date={`2018-02-05T05:00:00.000Z`} /></Heading>
             </div>
             <Headline size="small">
               The economy built upon blockchain and social networks would give everyone transparent access
