@@ -183,29 +183,14 @@ export default class Home extends Component {
           <InfographicSection className="infographic__section infographic__section--start">
             <div className="infographic__section-header">
               <Headline size="medium" strong={true} margin="none">Decentralized achievements network</Headline>
-              <Heading tag="h4" margin="none">Tokensale address: {this.state.tokensaleAddress}</Heading>
               <Heading tag="h4" margin="none">Token address: {this.state.tokenAddress}</Heading>
               <Heading tag="h4" margin="none">Your balance: {this.state.balance} DIADEM</Heading>
-              <Heading tag="h4" margin="none">Time left: <SaleCountdown date={`2018-02-05T05:00:00.000Z`} /></Heading>
-              <Heading tag="h4" margin="none"><i>We offer <b>100% Bonus</b> and we don't request KYC only during this period.</i></Heading>
+              <Heading tag="h4" margin="none">Contact us: <b>team@challenge.do</b></Heading>
             </div>
             <Headline size="small">
               Diadem Token give the power to create challenges, invest in talents, guide the actions of community and develop own habits
               <Anchor label="Whitepaper" primary={true} href="https://docs.google.com/document/d/1xgqRX8RsMuJfJsYH3nm3h_Lsbi5d2SQ1C-kDmCJANYk/edit?usp=sharing" target="_blank" />
             </Headline>
-              <Form plain={true} onSubmit={this._onSubmit}>
-                <Box direction="row" justify="center">
-                <FormField label="ETH"><TextInput value={this.state.eth} onDOMChange={this._onChangeEth} /></FormField>
-                <FormField label="DIADEM"><TextInput value={this.state.diadem} onDOMChange={this._onChangeDiadem} /></FormField>
-                <Button className="tip-button" primary={true} type="submit" onClick={this._onSubmit} />
-                </Box>
-              </Form>
-            {this.state.metamaskLayer &&
-            <Headline size="small">
-              <div>Please connect to MetaMask and refresh the page</div>
-              <div>Also you can manually send {this.state.eth} ETH directly to {this.state.tokensaleAddress}</div>
-            </Headline>
-            }
           </InfographicSection>
         </div>
       </Article>
